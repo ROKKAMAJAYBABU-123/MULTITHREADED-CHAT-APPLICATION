@@ -18,7 +18,7 @@ public class chatserver {
                 System.out.println("✅ New client connected: " + clientSocket);
                 ClientHandler clientHandler = new ClientHandler(clientSocket);
                 clientHandlers.add(clientHandler);
-                clientHandler.start();
+                clientHandler.start();  // Start client thread
             }
         } catch (IOException e) {
             System.out.println("❌ Server error: " + e.getMessage());
